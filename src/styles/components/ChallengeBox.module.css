@@ -1,0 +1,115 @@
+.challengeBoxContainer {
+  height: 100%;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 2rem;
+  background: (var(--text));
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.challengeNotActive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.challengeNotActive strong {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.challengeNotActive p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.4;
+  max-width: 70%;
+  margin-top: 1rem;
+}
+
+.challengeActive {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.challengeActive header {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 0 2rem 1.5rem;
+  border-bottom: 1px solid var(--gray-line);
+}
+
+.challengeActive main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.challengeActive main strong {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--title);
+  margin: 1.5rem 0 1rem;
+  color: var(--white);
+}
+
+.challengeActive main p {
+  line-height: 1.5rem;
+}
+
+.challengeActive footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.challengeActive footer button {
+  height: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 5px;
+
+  color: var(--white);
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.challengeActive footer button.challengeFailedButton {
+  padding: 1rem;
+  background: var(--red);
+  transition: border-radius 0.5s, background-color 0.5s, filter 0.5s;
+}
+
+.challengeActive footer button.challengeSucceededButton {
+  padding: 1rem;
+  background: var(--green);
+  transition: border-radius 0.5s, background-color 0.5s, filter 0.5s;
+}
+
+.challengeActive footer button.challengeFailedButton:hover {
+  border-radius: 30px;
+  filter: grayscale(70%);
+}
+
+.challengeActive footer button.challengeSucceededButton:hover {
+  border-radius: 30px;
+  filter: saturate(3);
+}
